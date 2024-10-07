@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Circular Motion Loader</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #000;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    svg {
+      position: relative;
+      height: 80px;
+      width: 80px;
+      animation: rotate 1.9s linear infinite;
+      background: ;
+      border-radius: 50%;
+    }
+    svg circle {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 6.5px;
+      stroke-linecap: round;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: dash 1.75s linear infinite;
+      box-shadow: 5px 5px 15px #fff;
+    }
+    
+    @keyframes rotate {
+      0% {
+        rotate: 0deg;
+      }
+      100% {
+        rotate: 360deg;
+      }
+    }
+    @keyframes dash {
+      0% {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      }
+      50% {
+      stroke-dasharray: 150, 200;
+      stroke-dashoffset: 35;
+      }
+      100% {
+      stroke-dasharray: 300, 200;
+      stroke-dashoffset: -200;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <svg viewbox="0 0 100 100">
+    <circle cx="50" cy="50" r="35"></circle>
+  </svg>
+  
+</body>
+
+</html>
